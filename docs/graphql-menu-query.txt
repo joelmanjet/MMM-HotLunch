@@ -1,0 +1,54 @@
+{
+  menu(id: "5c829b1c534a135521ca0f8c") {
+    id
+    bg
+    weeksForCycle
+    isTwoPages
+    month
+    year
+    menuType {
+      id
+      name
+      formats
+      listMenuIDs
+      sitePaths {
+        sites {
+          id
+          name
+        }
+      }
+    }
+    items {
+      day
+      product {
+        id
+        name
+        category
+        enabled
+        food_group
+        hide_on_calendars
+        hide_on_mobile
+        is_ancillary
+        long_description
+        meal
+        pdf_url
+        portion_size
+        portion_size_unit
+        price
+        product_fullname
+        productID
+        providerProductID
+        visible_month_cal
+        hide_on_calendars
+        hide_on_web_menu_view
+        global
+      }
+    }
+    previousMonthPublished {
+      id
+    }
+    nextMonthPublished {
+      id
+    }
+  }
+}

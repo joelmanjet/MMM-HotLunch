@@ -1,0 +1,8 @@
+/* This width seems to keep the content from messing up other widgets on the page */
+.MMM-HotLunch {
+  max-width: 13em;
+}
+/* Shifts things to the left to "undo" some of the indent from the <ul> */
+.MMM-HotLunch .fa-ul>li {
+    margin-left: -21px;
+}
