@@ -20,7 +20,8 @@ module.exports = NodeHelper.create({
     // HTTP GET the menu data and pull out the menu items
     getMenuItems: function () {
         // https://www.twilio.com/blog/2017/08/http-requests-in-node-js.html
-        var url = this.config.url;
+        var menuid = this.config.menuid;
+        var url = 'https://api.isitesoftware.com//graphql?query=%7B%0Amenu%28id%3A%20%22' + menuid + '%22%29%20%7B%0Aid%0Abg%0AweeksForCycle%0AisTwoPages%0Amonth%0Ayear%0AmenuType%20%7B%0Aid%0Aname%0Aformats%0AlistMenuIDs%0AsitePaths%20%7B%0Asites%20%7B%0Aid%0Aname%0A%7D%0A%7D%0A%7D%0Aitems%20%7B%0Aday%0Aproduct%20%7B%0Aid%0Aname%0Acategory%0Aenabled%0Afood_group%0Ahide_on_calendars%0Ahide_on_mobile%0Ais_ancillary%0Along_description%0Ameal%0Apdf_url%0Aportion_size%0Aportion_size_unit%0Aprice%0Aproduct_fullname%0AproductID%0AproviderProductID%0Avisible_month_cal%0Ahide_on_calendars%0Ahide_on_web_menu_view%0Aglobal%0A%7D%0A%7D%0ApreviousMonthPublished%20%7B%0Aid%0A%7D%0AnextMonthPublished%20%7B%0Aid%0A%7D%0A%7D%0A%7D%0A';
         https.get(url, (resp) => {
             let data = '';
             resp.on('data', (chunk) => {
