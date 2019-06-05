@@ -4,7 +4,7 @@
 Module.register('MMM-HotLunch', {
     defaults: {
         updateInterval: 60 * 60 * 1000,
-        menuid: '5c829b1c534a135521ca0f8c'
+        menuid: '5c93c3a5534a134f58ee023d'
     },
 
     // CSS is used to limit the width of the widget.
